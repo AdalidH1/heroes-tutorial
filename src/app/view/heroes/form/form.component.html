@@ -1,17 +1,67 @@
-<div>
-    <form [formGroup]="formGroup">
-        <mat-form-field class="example-form-field">
-            <mat-label>Clearable input</mat-label>
-            <input matInput type="text" [(ngModel)]="value">
-            @if (value) {{
-              <button matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-                <mat-icon>close</mat-icon>
-              </button>
-            }}
-          </mat-form-field>
-    <input formControlName="name">    
-    <input formControlName="email">
-    <button (click)="submit()" [disabled]="formGroup.invalid">Enviar</button>
+<div class="container">
+  <form [formGroup]="formGroup" class="content">
+      <mat-form-field appearance="outline">
+      <mat-label>Nombre</mat-label>
+      <input
+        formControlName="name"
+        matInput
+        type="text"
+        placeholder="Ejem. Alan"
+      />
+    </mat-form-field>
+    <div class="error" *ngIf="f['name'].errors?.['required'] && f['name'].touched">
+      El nombre es obligatorio.
+    </div>
+    
 
-    </form>
+    <mat-form-field appearance="outline">
+      <mat-label>Correo</mat-label>
+      <input
+        formControlName="email"
+        matInput
+        type="email"
+        placeholder="Ejem. nombre@gmail.com"
+      />
+    </mat-form-field>
+    <div class="error" *ngIf="f['email'].errors?.['required'] && f['email'].touched">
+      El correo es obligatorio.
+    </div>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Teléfono</mat-label>
+      <input
+        formControlName="phone"
+        matInput
+        type="number"
+        placeholder="Ejem. 6185447877"
+      />
+    </mat-form-field>
+    <div class="error" *ngIf="f['phone'].errors?.['required'] && f['phone'].touched">
+      El teléfono es obligatorio.
+    </div>
+    <div class="error" *ngIf="f['phone'].errors?.['phoneInvalid'] && f['phone'].touched">
+      El teléfono debe tener exactamente 10 dígitos.
+    </div>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Contraseña</mat-label>
+      <input matInput id="password" [type]="hide ? 'password' : 'text'" formControlName="password" />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="clickEvent($event)"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+      >
+        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+    </mat-form-field>
+      <div class="error" *ngIf="f['password'].errors?.['required'] && f['password'].touched">
+        La contraseña es obligatoria.
+      </div>
+      <div class="error" *ngIf="f['password'].errors?.['passwordStrength'] && f['password'].touched">
+        La contraseña debe tener al menos 8 caracteres, incluyendo una mayúscula, una minúscula y un número.
+      </div>
+    <button mat-flat-button color="accent" (click)="submit()" [disabled]="formGroup.invalid">Enviar</button>
+  </form>
 </div>
