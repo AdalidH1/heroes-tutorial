@@ -10,11 +10,16 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { RouterLink } from '@angular/router';
+import { DashboardComponent } from './view/heroes/dashboard/dashboard.component';
+import { TableComponent } from './view/heroes/table/table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
+    DashboardComponent,
+    TableComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +31,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatInputModule,
     MatIconModule,
     MatButtonModule,
+    
 
   ],
   providers: [],
