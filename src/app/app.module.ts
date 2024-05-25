@@ -13,13 +13,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { RouterLink } from '@angular/router';
 import { DashboardComponent } from './view/heroes/dashboard/dashboard.component';
 import { TableComponent } from './view/heroes/table/table.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
     DashboardComponent,
-    TableComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +31,8 @@ import { TableComponent } from './view/heroes/table/table.component';
     MatInputModule,
     MatIconModule,
     MatButtonModule,
+    TableComponent,
+    MatSidenavModule,
     
 
   ],

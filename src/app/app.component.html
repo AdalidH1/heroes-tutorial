@@ -1,7 +1,42 @@
-<h1>Inicio</h1>
-<a routerLink="dashboard">Inicio</a>
-<br>
-<a routerLink="form">Form</a>
-<br>
-<a routerLink="table">Table</a>
-<router-outlet></router-outlet>
+<div id="app">
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer mode="side" class="nav">
+      <a mat-fab extended routerLink="dashboard">
+        <mat-icon>home</mat-icon>
+        Home
+      </a>
+      <br>
+      <a mat-fab extended routerLink="form">
+        <mat-icon>input</mat-icon>
+        Register
+      </a>
+      <br>
+      <a mat-fab extended routerLink="table">
+        <mat-icon>grid_on</mat-icon>
+        Table
+      </a>
+    </mat-drawer>
+    <mat-drawer-content>
+      <div class="example-sidenav-content">
+        <button type="button" mat-icon-button matTooltip="Basic" aria-label="Example icon-button with a heart icon"
+          (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <router-outlet></router-outlet>
+      </div>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>
+<!-- <mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened class="nav">
+        <a routerLink="dashboard">Inicio</a>
+        <br>
+        <a routerLink="form">Form</a>
+        <br>
+        <a routerLink="table">Table</a>
+        <br>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container> -->
