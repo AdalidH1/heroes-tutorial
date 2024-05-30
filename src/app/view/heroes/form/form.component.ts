@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { passwordValidator } from "./validators/password-validator";
 import { phoneValidator } from './validators/phone-validator';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-form',
@@ -19,7 +20,7 @@ export class FormComponent implements OnInit {
     event.stopPropagation();
   }
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private userService:UserService ) { }
 
   ngOnInit(): void {
     this.initForm();
@@ -28,9 +29,12 @@ export class FormComponent implements OnInit {
   initForm() {
     this.formGroup = this.formBuilder.group({
       name: ["", Validators.required],
-      email: ["", [Validators.required, Validators.email]],
-      phone: ["", [Validators.required, phoneValidator()]],
-      password: ["", [Validators.required, passwordValidator()]],
+      lastName: ["", Validators.required],
+      age: ["", Validators.required],
+      // email: ["", [Validators.required, Validators.email]],
+      // phone: ["", [Validators.required, phoneValidator()]],
+      // password: ["", [Validators.required, passwordValidator()]],
+      status: ["", Validators.required]
     });
   }
 
@@ -39,5 +43,6 @@ export class FormComponent implements OnInit {
   }
   submit(){
     console.log(this.formGroup.value)
+    this.userService.addData(this.formGroup.value)
   }
 }
