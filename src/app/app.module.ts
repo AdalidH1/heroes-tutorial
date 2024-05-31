@@ -14,15 +14,34 @@ import { RouterLink } from '@angular/router';
 import { DashboardComponent } from './view/heroes/dashboard/dashboard.component';
 import { TableComponent } from './view/heroes/table/table.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { AdministracionComponent } from './view/concepts/administracion/administracion.component';
+import { AdministracionProyectosComponent } from './view/concepts/administracion-proyectos/administracion-proyectos.component';
+import { NegociacionComponent } from './view/concepts/negociacion/negociacion.component';
+import { ProcesoAdminComponent } from './view/concepts/proceso-admin/proceso-admin.component';
+import { ManipulacionComponent } from './view/concepts/manipulacion/manipulacion.component';
+import { EficaciaComponent } from './view/concepts/eficacia/eficacia.component';
+import { EficienciaComponent } from './view/concepts/eficiencia/eficiencia.component';
+import { RiesgosComponent } from './view/concepts/riesgos/riesgos.component';
+import { RiesgosProyectosComponent } from './view/concepts/riesgos-proyectos/riesgos-proyectos.component';
+import { ModeloComponent } from './view/modelo/modelo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
-    DashboardComponent,
   ],
   imports: [
     BrowserModule,
+    AdministracionComponent,
+    AdministracionProyectosComponent,
+    NegociacionComponent,
+    ProcesoAdminComponent,
+    ManipulacionComponent,
+    EficaciaComponent,
+    EficienciaComponent,
+    RiesgosComponent,
+    RiesgosProyectosComponent,
+    ModeloComponent,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
@@ -33,6 +52,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatButtonModule,
     TableComponent,
     MatSidenavModule,
+    DashboardComponent,
     
 
   ],

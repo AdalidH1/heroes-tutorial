@@ -1,0 +1,110 @@
+.example-card {
+  max-width: 100%;
+  width: 25%;
+  margin-right: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.alumnos {
+  text-align: center;
+}
+.link {
+  display: flex;
+  margin-top: -4vh;
+  justify-content:space-around;
+  align-items: center;
+}
+.example-header-image-M {
+  background-image: url('../../../../assets/mafe1.png');
+  background-size: cover;
+}
+
+.example-header-image-H {
+  background-image: url('../../../../assets/hector1.png');
+  background-size: cover;
+}
+
+.example-header-image-A {
+  background-image: url('../../../../assets/adalid1.jpeg');
+  background-size: cover;
+}
+
+.image-pro {
+  width: 15vw;
+  /* Ensure the image is square */
+  height: 15vw;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  margin-top: 3vh;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #00e676;
+  /* Default color */
+}
+
+.boton svg {
+  margin-right: 8px;
+  fill: currentColor;
+}
+
+.boton[data-color="github"] {
+  background-color: #000000;
+}
+
+.boton[data-color="html"] {
+  background-color: #fc4f13;
+}
+
+.boton[data-color="back"] {
+  background-color: #fc132e;
+}
+
+.boton[data-color="javascript"] {
+  background-color: #efd81d;
+}
+
+.boton[data-color="php"] {
+  background-color: #d32f2f;
+}
+
+.boton[data-color="db"] {
+  background-color: #126e78;
+}
+
+.boton[data-color="front"] {
+  background-color: #d335ff;
+}
+
+.boton[data-color="css"] {
+  background-color: #316af1;
+}
+
+.boton[data-color="php"] {
+  background-color: #7b7fb5;
+}
+
+.boton[data-color="ux"] {
+  background-color: #f6478a;
+}

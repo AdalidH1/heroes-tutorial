@@ -1,0 +1,122 @@
+.container1 {
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  }
+
+  .content1 {
+    padding: 3vh;
+    width: 50%;
+    height: auto;
+    border-radius: 2vh;
+    font-size: 2.2vh;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    
+
+  }
+.example-card {
+    max-width: 100%;
+    width: 80%;
+    margin-right: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1vh;
+    padding: 1vh;
+  }
+  
+ 
+  
+  .image-pro {
+    width: 20vw;
+    /* Ensure the image is square */
+    height: 20vw;
+    object-fit: cover;
+  }
+  
+  a {
+    text-decoration: none;
+    
+  }
+  
+  .tags {
+    display: flex;
+    height: 50%;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
+    word-wrap: break-word;
+    gap: 10px;overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  p {
+    font-size: 14px;
+  }
+  
+  
+  .boton {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #00e676;
+    /* Default color */
+  }
+  
+  .boton svg {
+    margin-right: 8px;
+    fill: currentColor;
+  }
+  
+  .content1[data-color="github"] {
+    background-color: #000000;
+  }
+  
+  .content1[data-color="html"] {
+    background-color: #fc4f13;
+  }
+  
+  .content1[data-color="back"] {
+    background-color: #fc132e;
+  }
+  
+  .content1[data-color="javascript"] {
+    background-color: #efd81d;
+  }
+  
+  .content1[data-color="php"] {
+    background-color: #d32f2f;
+  }
+  
+  .content1[data-color="db"] {
+    background-color: #126e78;
+  }
+  
+  .content1[data-color="front"] {
+    background-color: #d335ff;
+  }
+  
+  .content1[data-color="css"] {
+    background-color: #316af1;
+  }
+  
+  .content1[data-color="php"] {
+    background-color: #7b7fb5;
+  }
+  
+  .content1[data-color="ux"] {
+    background-color: #f6478a;
+  }

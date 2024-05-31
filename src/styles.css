@@ -17,6 +17,9 @@ a {
 .nav {
   padding: 10vh;
 }
+.nav::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari y Opera */
+}
 
 #app {
   position: relative;
@@ -31,7 +34,6 @@ a {
   align-items: center;
 
 }
-
 .content {
   width: 100%;
   max-width: 25%;
@@ -68,4 +70,9 @@ th {
 .example-container {
   width: auto;
   height: 100%;
+}
+
+
+.example-container::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari y Opera */
 }
