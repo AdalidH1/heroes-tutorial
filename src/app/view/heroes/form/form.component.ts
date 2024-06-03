@@ -31,10 +31,9 @@ export class FormComponent implements OnInit {
       name: ["", Validators.required],
       lastName: ["", Validators.required],
       age: ["", Validators.required],
-      // email: ["", [Validators.required, Validators.email]],
-      // phone: ["", [Validators.required, phoneValidator()]],
-      // password: ["", [Validators.required, passwordValidator()]],
-      status: ["", Validators.required]
+      email: ["", [Validators.required, Validators.email]],
+      phone: ["", [Validators.required, phoneValidator()]],
+      password: ["", [Validators.required, passwordValidator()]],
     });
   }
 

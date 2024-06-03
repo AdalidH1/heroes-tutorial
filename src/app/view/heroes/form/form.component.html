@@ -12,6 +12,32 @@
     <div class="error" *ngIf="f['name'].errors?.['required'] && f['name'].touched">
       El nombre es obligatorio.
     </div>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Apellido(s)</mat-label>
+      <input
+        formControlName="lastName"
+        matInput
+        type="text"
+        placeholder="Ejem. Herrera"
+      />
+    </mat-form-field>
+    <div class="error" *ngIf="f['lastName'].errors?.['required'] && f['lastName'].touched">
+      El apellido es obligatorio.
+    </div>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Edad</mat-label>
+      <input
+        formControlName="age"
+        matInput
+        type="number"
+        placeholder="18"
+      />
+    </mat-form-field>
+    <div class="error" *ngIf="f['age'].errors?.['required'] && f['age'].touched">
+      La edad es obligatoria.
+    </div>
     
 
     <mat-form-field appearance="outline">

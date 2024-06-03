@@ -3,5 +3,7 @@ export interface User {
     name: string;
     lastName: string;
     age: number;
-    status: boolean;
+    email: string;
+    phone: number;
+    password: string;
 }
