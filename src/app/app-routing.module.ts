@@ -14,6 +14,10 @@ import { EficienciaComponent } from './view/concepts/eficiencia/eficiencia.compo
 import { RiesgosComponent } from './view/concepts/riesgos/riesgos.component';
 import { RiesgosProyectosComponent } from './view/concepts/riesgos-proyectos/riesgos-proyectos.component';
 import { ModeloComponent } from './view/modelo/modelo.component';
+import { CalcCotComponent } from './calc-cot/calc-cot.component';
+import { CalcEfiComponent } from './calc-efi/calc-efi.component';
+import { CalcEmpComponent } from './calc-emp/calc-emp.component';
+import { CalcRioComponent } from './calc-rio/calc-rio.component';
 
 const routes: Routes = [
   {path:"", redirectTo: "/dashboard", pathMatch: "full"},
@@ -25,6 +29,10 @@ const routes: Routes = [
   {path: "mani", component: ManipulacionComponent},
   {path: "efica", component: EficaciaComponent},
   {path: "efici", component: EficienciaComponent},
+  {path: "calc_cot", component: CalcCotComponent},
+  {path: "calc_efi", component: CalcEfiComponent},
+  {path: "calc_emp", component: CalcEmpComponent},
+  {path: "calc_rio", component: CalcRioComponent},
   {path: "ries", component: RiesgosComponent},
   {path: "respro", component: RiesgosProyectosComponent},
   {path: "mode", component: ModeloComponent},

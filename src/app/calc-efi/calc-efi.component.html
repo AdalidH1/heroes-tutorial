@@ -1,0 +1,17 @@
+<div class="container4">
+    <h1>Calculadora de Efectividad a partir de Eficacia y Eficiencia</h1>
+
+    <form (ngSubmit)="calcularEfectividad()" #formulario="ngForm">
+        <label for="eficacia">Eficacia:</label>
+        <input type="number" id="eficacia" name="eficacia" [(ngModel)]="eficacia" min="0" max="100" step="0.01" required>
+
+        <label for="eficiencia">Eficiencia:</label>
+        <input type="number" id="eficiencia" name="eficiencia" [(ngModel)]="eficiencia" min="0" max="100" step="0.01" required>
+
+        <button type="submit">Calcular</button>
+    </form>
+
+    <div class="resultado" *ngIf="efectividad !== null">
+        <p>Efectividad: {{ efectividad.toFixed(2) }}%</p>
+    </div>
+</div>

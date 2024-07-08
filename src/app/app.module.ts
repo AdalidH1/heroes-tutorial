@@ -24,11 +24,19 @@ import { EficienciaComponent } from './view/concepts/eficiencia/eficiencia.compo
 import { RiesgosComponent } from './view/concepts/riesgos/riesgos.component';
 import { RiesgosProyectosComponent } from './view/concepts/riesgos-proyectos/riesgos-proyectos.component';
 import { ModeloComponent } from './view/modelo/modelo.component';
+import { CalcCotComponent } from './calc-cot/calc-cot.component';
+import { CalcEfiComponent } from './calc-efi/calc-efi.component';
+import { CalcEmpComponent } from './calc-emp/calc-emp.component';
+import { CalcRioComponent } from './calc-rio/calc-rio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
+    CalcCotComponent,
+    CalcEfiComponent,
+    CalcEmpComponent,
+    CalcRioComponent,
   ],
   imports: [
     BrowserModule,
